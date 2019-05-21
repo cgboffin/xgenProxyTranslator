@@ -1,0 +1,90 @@
+global proc AExgenProxyTemplate( string $nodeName )
+{
+    editorTemplate -beginScrollLayout;
+ 
+    editorTemplate -beginLayout "Xgen Proxy" -collapse 0;
+        editorTemplate -addControl "xgenFilePath";
+        editorTemplate -addControl "alembicFilePath";
+        editorTemplate -addControl "palette";
+        editorTemplate -addControl "description";
+        editorTemplate -addControl "patch";
+        editorTemplate -addControl "cullingCamera";
+        editorTemplate -addControl "xgenDebugLogLevel";
+        editorTemplate -addControl "xgenWarningLogLevel";
+        editorTemplate -addControl "xgenInfoLogLevel";
+ 
+    editorTemplate -endLayout;
+ 
+    AEdependNodeTemplate $nodeName;
+
+    editorTemplate -suppress "displacementMap";
+    editorTemplate -suppress "renderStats";
+    editorTemplate -suppress "objectDisplay";
+    editorTemplate -suppress "nodeBehavior";
+    editorTemplate -suppress "renderLayerInfo";
+    editorTemplate -suppress "colorSet";
+    editorTemplate -suppress "collisionOffsetVelocityIncrement";
+    editorTemplate -suppress "collisionDepthVelocityIncrement";
+    editorTemplate -suppress "collisionOffsetVelocityMultiplier";
+    editorTemplate -suppress "collisionDepthVelocityMultiplier";
+    editorTemplate -suppress "caching";
+    editorTemplate -suppress "nodeState";
+    editorTemplate -suppress "visibility";
+    editorTemplate -suppress "intermediateObject";
+    editorTemplate -suppress "template";
+    editorTemplate -suppress "ghosting";
+    editorTemplate -suppress "instObjGroups";
+    editorTemplate -suppress "useObjectColor";
+    editorTemplate -suppress "objectColor";
+    editorTemplate -suppress "drawOverride";
+    editorTemplate -suppress "lodVisibility";
+    editorTemplate -suppress "renderInfo";
+    editorTemplate -suppress "ghostingControl";
+    editorTemplate -suppress "ghostCustomSteps";
+    editorTemplate -suppress "ghostFrames";
+    editorTemplate -suppress "ghostRangeStart";
+    editorTemplate -suppress "ghostRangeEnd";
+    editorTemplate -suppress "ghostDriver";
+    editorTemplate -suppress "motionBlur";
+    editorTemplate -suppress "visibleInReflections";
+    editorTemplate -suppress "visibleInRefractions";
+    editorTemplate -suppress "castsShadows";
+    editorTemplate -suppress "receiveShadows";
+    editorTemplate -suppress "maxVisibilitySamplesOverride";
+    editorTemplate -suppress "maxVisibilitySamples";
+    editorTemplate -suppress "geometryAntialiasingOverride";
+    editorTemplate -suppress "antialiasingLevel";
+    editorTemplate -suppress "shadingSamplesOverride";
+    editorTemplate -suppress "shadingSamples";
+    editorTemplate -suppress "maxShadingSamples";
+    editorTemplate -suppress "volumeSamplesOverride";
+    editorTemplate -suppress "volumeSamples";
+    editorTemplate -suppress "depthJitter";
+    editorTemplate -suppress "ignoreSelfShadowing";
+    editorTemplate -suppress "primaryVisibility";
+    editorTemplate -suppress "compInstObjGroups";
+    editorTemplate -suppress "tweak";
+    editorTemplate -suppress "relativeTweak";
+    editorTemplate -suppress "controlPoints";
+    editorTemplate -suppress "weights";
+    editorTemplate -suppress "uvSet";
+    editorTemplate -suppress "currentUVSet";
+    editorTemplate -suppress "displayImmediate";
+    editorTemplate -suppress "displayColors";
+    editorTemplate -suppress "displayColorChannel";
+    editorTemplate -suppress "currentColorSet";
+    editorTemplate -suppress "ignoreHwShader";
+    editorTemplate -suppress "doubleSided";
+    editorTemplate -suppress "opposite";
+    editorTemplate -suppress "smoothShading";
+    editorTemplate -suppress "boundingBoxScale";
+    editorTemplate -suppress "featureDisplacement";
+    editorTemplate -suppress "initialSampleRate";
+    editorTemplate -suppress "extraSampleRate";
+    editorTemplate -suppress "textureThreshold";
+    editorTemplate -suppress "normalThreshold";
+    editorTemplate -suppress "holdOut";
+
+    editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}
